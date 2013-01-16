@@ -3,7 +3,7 @@
 Plugin Name: Facebook Comments for Genesis
 Plugin URI: http://clickwp.com/
 Description: An optimized method to replace the default WordPress comments with Facebook comments. You must be using the Genesis Framework to use this plugin.
-Version: 0.1
+Version: 0.1.1
 Author: ClickWP
 Author URI: http://clickwp.com
 License: GPLv2 
@@ -33,6 +33,9 @@ function activation_hook() {
  */
 add_action( 'init', 'click_fbcomments_init' );
 function click_fbcomments_init() {
+
+	if ( !is_singular() )
+		return;
 
 	// Translations
 	// load_plugin_textdomain( 'fb-comments-for-genesis', false, basename( dirname( __FILE__ ) ) . '/languages' );

@@ -3,8 +3,8 @@ Contributors: blogjunkie
 Donate link: http://clickwp.com/support-clickwp/
 Tags: genesis, genesiswp, facebook, comments
 Requires at least: 3.4
-Tested up to: 3.4.2
-Stable tag: 0.1 beta
+Tested up to: 3.5
+Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -73,6 +73,9 @@ No, sorry.
 
 
 ## Changelog ##
+
+= 0.1.1 =
+* Added conditional to only load comments if is_singular returns true
 
 = 0.1 =
 * Initial release
