@@ -34,9 +34,6 @@ function activation_hook() {
 add_action( 'init', 'click_fbcomments_init' );
 function click_fbcomments_init() {
 
-	if ( !is_singular() )
-		return;
-
 	// Translations
 	// load_plugin_textdomain( 'fb-comments-for-genesis', false, basename( dirname( __FILE__ ) ) . '/languages' );
 	
@@ -177,6 +174,9 @@ function click_fbcomments_metabox_fb_settings() {
 function click_fbcomments_jssdk_setup() {
 
 	if ( function_exists( 'fb_js_sdk_setup' ) )
+		return;
+		
+	if ( !function_exists('genesis_get_options') ) 
 		return;
 
 	if ( !genesis_get_option('fb_app_id') )
